@@ -1,0 +1,67 @@
+:host
+  display inline-block
+  position relative
+  padding-left 4rem
+
+  .header
+    color #ef6c00
+    font-family Montserrat
+    font-weight 300
+
+  & > .header
+    font-size 2.8rem
+    letter-spacing 1px
+    margin-bottom 0.8rem
+
+.character, .english
+  color #333
+  transition 80ms color ease-out
+
+  &:hover:not(.completed)
+    color #00c1de
+    transition 80ms color ease-in
+
+    &.focused
+      color #333
+      transition 80ms color ease-out
+
+  &.completed
+    color #ffd54f
+
+.examples
+  margin-top 1.8rem
+
+  .header
+    font-size 1.4rem
+    margin-bottom 1rem
+
+  .chinese
+    font-size 1.4rem
+
+  .english
+    font-size 1.1rem
+    color #ad1457
+
+  .example
+    display block
+    line-height 1.4rem
+    margin-bottom 1.1rem
+
+.translation
+  display inline-block
+  text-align center
+
+  .english
+    font-size 1.6rem // font-size should be relative to phrase length
+    margin-top 0.7rem
+
+.english
+  /deep/
+    input
+      border 0
+
+      &:focus
+        outline 0
+
+    .hints .completed
+      color #ffc107

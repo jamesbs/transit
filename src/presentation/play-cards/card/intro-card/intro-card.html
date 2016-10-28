@@ -1,0 +1,30 @@
+<app-action-panel class="actions" [langItem]="langItem">
+</app-action-panel>
+<div class="header">
+  LEARN
+</div>
+<div class="translation">
+  <div class="chinese">
+    <app-character
+      class="character"
+      [character]="character"
+      *ngFor="let character of characters; let index = index"
+      (complete)="characterComplete(index)"
+      (failure)="onFailure()">
+    </app-character>
+  </div>
+  <app-english-input class="english"
+    [english]="langItem.english"
+    (success)="englishSuccess()"
+    (complete)="englishComplete()"
+    (failure)="actionSounds.failure.play('main')">
+  </app-english-input>
+</div>
+<div class="examples" *ngIf="langItem.examples?.length > 0">
+  <div class="header">Examples</div>
+  <app-example
+    *ngFor="let example of langItem.examples"
+    class="example"
+    [example]="example">
+  </app-example>
+</div>

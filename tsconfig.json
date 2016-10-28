@@ -1,0 +1,26 @@
+
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": [
+      "bluebird",
+      "jasmine",
+      "karma",
+      "log4js",
+      "node",
+      "source-map",
+      "uglify-js",
+      "webpack",
+      "core-js"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

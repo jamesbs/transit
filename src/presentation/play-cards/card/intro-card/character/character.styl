@@ -1,0 +1,24 @@
+:host
+  display inline-block
+
+  &.completed
+    .chinese
+      text-shadow 2px 2px 1px #f9a825
+
+    /deep/ .hint
+      color #ffc107
+
+  &:not(.completed)
+    /deep/ .hint
+      transition top 50ms ease-out
+
+.pinyin-input
+  height 24px
+
+.chinese
+  font-size 10rem // font-size should be relative to phrase length
+  line-height 1.14em
+
+.pinyin
+  font-size 1.5rem // font-size should be relative to phrase length
+  padding-top 6px

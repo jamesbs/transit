@@ -1,0 +1,11 @@
+<template [ngIf]="card && card.langItem">
+  <div class="card-container" [ngSwitch]="card?.type">
+    <app-intro-card
+      *ngSwitchCase="'intro'"
+      [active]="active"
+      [langItem]="card.langItem"
+      (complete)="complete.emit()">
+    </app-intro-card>
+    <div *ngSwitchDefault>default</div>
+  </div>
+</template>
